@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode colors */
+    --color-bg: 255 255 255;
+    --color-surface: 249 250 251;
+    --color-surface-elevated: 255 255 255;
+    --color-text-primary: 17 24 39;
+    --color-text-secondary: 75 85 99;
+    --color-text-muted: 156 163 175;
+    --color-border: 229 231 235;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --color-bg: 10 10 11;
+    --color-surface: 26 26 28;
+    --color-surface-elevated: 42 42 46;
+    --color-text-primary: 249 250 251;
+    --color-text-secondary: 209 213 219;
+    --color-text-muted: 156 163 175;
+    --color-border: 55 65 81;
+  }
+
+  body {
+    @apply bg-[rgb(var(--color-bg))] text-[rgb(var(--color-text-primary))];
+    @apply transition-colors duration-300;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar for dark mode */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-500;
+  }
+
+  /* RTL support */
+  [dir='rtl'] {
+    direction: rtl;
+  }
+
+  [dir='ltr'] {
+    direction: ltr;
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism utility */
+  .glass {
+    @apply bg-white/10 dark:bg-white/5;
+    @apply backdrop-blur-lg backdrop-saturate-150;
+    @apply border border-white/20 dark:border-white/10;
+    @apply shadow-glass dark:shadow-glass-dark;
+  }
+
+  /* Card component base */
+  .card {
+    @apply bg-[rgb(var(--color-surface-elevated))];
+    @apply border border-[rgb(var(--color-border))];
+    @apply rounded-lg shadow-sm;
+    @apply transition-all duration-200;
+  }
+
+  .card-hoverable {
+    @apply hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center;
+    @apply px-4 py-2 rounded-lg;
+    @apply font-medium text-sm;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700;
+    @apply text-white;
+    @apply focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-700;
+    @apply text-white;
+    @apply focus:ring-secondary-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-600;
+    @apply text-primary-600 dark:text-primary-400;
+    @apply hover:bg-primary-50 dark:hover:bg-primary-950;
+    @apply focus:ring-primary-500;
+  }
+
+  .btn-ghost {
+    @apply text-[rgb(var(--color-text-primary))];
+    @apply hover:bg-[rgb(var(--color-surface))];
+    @apply focus:ring-gray-500;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700;
+    @apply text-white;
+    @apply focus:ring-red-500;
+  }
+
+  /* Input base styles */
+  .input {
+    @apply w-full px-4 py-2 rounded-lg;
+    @apply bg-[rgb(var(--color-surface))];
+    @apply border border-[rgb(var(--color-border))];
+    @apply text-[rgb(var(--color-text-primary))];
+    @apply placeholder:text-[rgb(var(--color-text-muted))];
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:ring-red-500;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+  }
+
+  .badge-warning {
+    @apply bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200;
+  }
+
+  .badge-error {
+    @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+  }
+}
+
+@layer utilities {
+
+  /* Text utilities */
+  .text-primary {
+    @apply text-[rgb(var(--color-text-primary))];
+  }
+
+  .text-secondary {
+    @apply text-[rgb(var(--color-text-secondary))];
+  }
+
+  .text-muted {
+    @apply text-[rgb(var(--color-text-muted))];
+  }
+
+  /* Background utilities */
+  .bg-surface {
+    @apply bg-[rgb(var(--color-surface))];
+  }
+
+  .bg-surface-elevated {
+    @apply bg-[rgb(var(--color-surface-elevated))];
+  }
+
+  /* Border utilities */
+  .border-default {
+    @apply border-[rgb(var(--color-border))];
+  }
+
+  /* RTL-aware spacing */
+  .ms-auto {
+    margin-inline-start: auto;
+  }
+
+  .me-auto {
+    margin-inline-end: auto;
+  }
+}

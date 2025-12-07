@@ -1,0 +1,177 @@
+{
+  "common": {
+    "buttons": {
+      "save": "שמור",
+      "cancel": "בטל",
+      "delete": "מחק",
+      "edit": "ערוך",
+      "submit": "שלח",
+      "next": "הבא",
+      "previous": "הקודם",
+      "upload": "העלה",
+      "download": "הורד",
+      "close": "סגור",
+      "confirm": "אשר",
+      "back": "חזור",
+      "continue": "המשך",
+      "getStarted": "התחל",
+      "learnMore": "למד עוד"
+    },
+    "labels": {
+      "email": "דוא\"ל",
+      "password": "סיסמה",
+      "confirmPassword": "אמת סיסמה",
+      "name": "שם",
+      "phone": "טלפון",
+      "address": "כתובת",
+      "search": "חיפוש",
+      "filter": "סנן",
+      "sort": "מיין",
+      "loading": "טוען...",
+      "saving": "שומר...",
+      "saved": "נשמר",
+      "error": "שגיאה",
+      "success": "הצלחה"
+    },
+    "messages": {
+      "welcome": "ברוך הבא",
+      "goodbye": "להתראות",
+      "thankYou": "תודה",
+      "pleaseWait": "אנא המתן...",
+      "noData": "אין נתונים זמינים",
+      "confirmDelete": "האם אתה בטוח שברצונך למחוק פריט זה?",
+      "unsavedChanges": "יש לך שינויים שלא נשמרו. האם אתה בטוח שברצונך לעזוב?"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "התחבר לחשבונך",
+      "subtitle": "ברוך שובך! אנא הזן את הפרטים שלך.",
+      "emailPlaceholder": "הזן את הדוא\"ל שלך",
+      "passwordPlaceholder": "הזן את הסיסמה שלך",
+      "rememberMe": "זכור אותי",
+      "forgotPassword": "שכחת סיסמה?",
+      "loginButton": "התחבר",
+      "noAccount": "אין לך חשבון?",
+      "signUp": "הירשם",
+      "orContinueWith": "או המשך עם"
+    },
+    "register": {
+      "title": "צור חשבון",
+      "subtitle": "התחל עם חישוב החזר המס שלך",
+      "namePlaceholder": "הזן את שמך המלא",
+      "emailPlaceholder": "הזן את הדוא\"ל שלך",
+      "passwordPlaceholder": "צור סיסמה",
+      "confirmPasswordPlaceholder": "אמת את הסיסמה שלך",
+      "agreeToTerms": "אני מסכים לתנאים וההגבלות",
+      "registerButton": "צור חשבון",
+      "haveAccount": "כבר יש לך חשבון?",
+      "signIn": "התחבר"
+    },
+    "errors": {
+      "invalidEmail": "אנא הזן כתובת דוא\"ל תקינה",
+      "passwordTooShort": "הסיסמה חייבת להיות לפחות 8 תווים",
+      "passwordMismatch": "הסיסמאות אינן תואמות",
+      "requiredField": "שדה זה הוא חובה",
+      "loginFailed": "דוא\"ל או סיסמה לא תקינים",
+      "registrationFailed": "ההרשמה נכשלה. אנא נסה שוב."
+    }
+  },
+  "wizard": {
+    "steps": {
+      "personal": "מידע אישי",
+      "family": "מצב משפחתי",
+      "children": "ילדים",
+      "divorce": "גירושין ומזונות",
+      "health": "בריאות ונכות",
+      "specialStatus": "מעמד מיוחד",
+      "income": "הכנסה",
+      "deductions": "ניכויים",
+      "severance": "פיצויים",
+      "summary": "סיכום"
+    },
+    "navigation": {
+      "saveAndExit": "שמור וצא",
+      "saveDraft": "שמור טיוטה",
+      "autoSaved": "נשמר אוטומטית",
+      "lastSaved": "נשמר לאחרונה",
+      "exitConfirm": "האם אתה בטוח שברצונך לצאת? ההתקדמות שלך תישמר."
+    },
+    "personal": {
+      "title": "מידע אישי",
+      "subtitle": "ספר לנו על עצמך ובחר את שנות המס לחישוב",
+      "fullName": "שם מלא",
+      "idNumber": "מספר תעודת זהות",
+      "address": "כתובת",
+      "email": "דוא\"ל",
+      "phone": "מספר טלפון",
+      "taxYears": "בחר שנות מס (1-6 שנים אחורה)",
+      "year": "שנה"
+    },
+    "family": {
+      "title": "מצב משפחתי",
+      "subtitle": "מידע על מצבך המשפחתי ובן/בת הזוג",
+      "gender": "מין",
+      "male": "זכר",
+      "female": "נקבה",
+      "maritalStatus": "מצב משפחתי",
+      "single": "רווק/ה",
+      "married": "נשוי/אה",
+      "divorced": "גרוש/ה",
+      "widowed": "אלמן/ה",
+      "spouseWorking": "האם בן/בת הזוג עובד/ת?",
+      "spouseRetirementAge": "האם בן/בת הזוג בגיל פרישה?",
+      "spouseDisabled": "האם לבן/בת הזוג יש נכות?"
+    }
+  },
+  "documents": {
+    "title": "מסמכים",
+    "upload": {
+      "title": "העלה מסמך",
+      "dragDrop": "גרור ושחרר קבצים כאן, או לחץ לעיון",
+      "acceptedTypes": "סוגי קבצים מקובלים: PDF, DOCX, JPG, PNG",
+      "maxSize": "גודל קובץ מקסימלי: 10MB",
+      "uploading": "מעלה...",
+      "success": "המסמך הועלה בהצלחה",
+      "error": "ההעלאה נכשלה. אנא נסה שוב."
+    },
+    "status": {
+      "uploaded": "הועלה",
+      "processing": "מעבד",
+      "tagged": "תויג",
+      "ready": "מוכן לתצוגה מקדימה",
+      "paid": "שולם",
+      "error": "שגיאה"
+    },
+    "actions": {
+      "view": "צפה בפרטים",
+      "download": "הורד",
+      "delete": "מחק",
+      "getFullReport": "קבל דוח מלא"
+    }
+  },
+  "dashboard": {
+    "welcome": "ברוך שובך",
+    "subtitle": "המשך את חישוב החזר המס שלך או התחל חדש",
+    "startNew": "התחל טופס חדש",
+    "resumeSaved": "המשך טופס שמור",
+    "yourDocuments": "המסמכים שלך",
+    "recentActivity": "פעילות אחרונה",
+    "estimatedRefund": "החזר משוער",
+    "stats": {
+      "documentsUploaded": "מסמכים שהועלו",
+      "formsCompleted": "טפסים שהושלמו",
+      "refundCalculated": "החזר שחושב"
+    }
+  },
+  "theme": {
+    "light": "מצב בהיר",
+    "dark": "מצב כהה",
+    "toggle": "החלף ערכת נושא"
+  },
+  "language": {
+    "english": "אנגלית",
+    "hebrew": "עברית",
+    "select": "בחר שפה"
+  }
+}
