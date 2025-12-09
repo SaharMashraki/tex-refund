@@ -17,7 +17,7 @@ export async function registerUser(input: z.infer<typeof RegisterSchema>) {
     data: {
       email: input.email,
       passwordHash: hashPassword(input.password),
-      fullName: input.fullName,
+      fullName: input.name,
     },
   });
 

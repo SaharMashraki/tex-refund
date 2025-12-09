@@ -132,7 +132,7 @@ const handleLogin = async () => {
   }
 
   isLoading.value = true
-
+  console.log(email.value, password.value)
   try {
     await login({ email: email.value, password: password.value })
   } catch (error: any) {

@@ -6,9 +6,9 @@ export const LoginSchema = z.object({
 });
 
 export const RegisterSchema = z.object({
-  email: z.string().email(),
+  email: z.string(),
   password: z.string().min(6),
-  fullName: z.string(),
+  name: z.string(),
 });
 
 export const AuthResponseSchema = z.object({
