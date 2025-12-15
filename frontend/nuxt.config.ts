@@ -1,3 +1,5 @@
+import i18nConfig from './i18n.config'
+console.log('i18nConfig:', i18nConfig)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -36,10 +38,14 @@ export default defineNuxtConfig({
 
   // i18n configuration
   i18n: {
-    locales: ['en', 'he'],
-    defaultLocale: 'en',
-    vueI18n: './i18n.config.ts'
+    locales: [
+      { code: 'en', file: 'en.json', dir: 'ltr' },
+      { code: 'he', file: 'he.json', dir: 'rtl' }
+    ],
+    defaultLocale: 'he',
+    langDir: './locales/'
   },
+
 
   // Pinia configuration
   pinia: {

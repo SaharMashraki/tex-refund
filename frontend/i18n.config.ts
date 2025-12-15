@@ -1,11 +1,11 @@
-import en from './locales/en.json'
-import he from './locales/he.json'
+import en from './i18n/locales/en.json'
+import he from './i18n/locales/he.json'
 
-export default defineI18nConfig(() => ({
+export default {
   legacy: false,
   locale: 'en',
   messages: {
     en,
     he
   }
-}))
+}

@@ -32,7 +32,7 @@
             <ThemeToggle />
             
             <!-- User menu -->
-            <div class="ltr:ml-4 rtl:mr-4 flex items-center gap-3">
+            <div class="ms-4 flex items-center gap-3">
               <span class="text-sm font-medium hidden md:block">{{ userName }}</span>
               <button
                 @click="handleLogout"
