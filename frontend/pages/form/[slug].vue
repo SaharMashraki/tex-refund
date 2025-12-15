@@ -22,21 +22,53 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath()
+import StepPersonal from '~/components/features/wizard/StepPersonal.vue'
+import StepFamily from '~/components/features/wizard/StepFamily.vue'
+import StepChildren from '~/components/features/wizard/StepChildren.vue'
+import StepDivorce from '~/components/features/wizard/StepDivorce.vue'
+import StepHealth from '~/components/features/wizard/StepHealth.vue'
+import StepSpecialStatus from '~/components/features/wizard/StepSpecialStatus.vue'
+import StepIncome from '~/components/features/wizard/StepIncome.vue'
+import StepDeductions from '~/components/features/wizard/StepDeductions.vue'
+import StepSeverance from '~/components/features/wizard/StepSeverance.vue'
+import StepSummary from '~/components/features/wizard/StepSummary.vue'
+
+const componentMap: Record<string, any> = {
+  StepPersonal,
+  StepFamily,
+  StepChildren,
+  StepDivorce,
+  StepHealth,
+  StepSpecialStatus,
+  StepIncome,
+  StepDeductions,
+  StepSeverance,
+  StepSummary
+}
+
 const route = useRoute()
 const router = useRouter()
 const wizardStore = useWizardStore()
 
 const stepId = computed(() => {
   const slug = route.params.slug as string
-  // Extract number from "step-N"
   const match = slug?.match(/^step-(\d+)$/)
   if (match) {
     return parseInt(match[1])
   }
-  return 1 // Default or invalid fallbacks
+  return 1
 })
 
-const currentStep = computed(() => wizardStore.steps.find(s => s.id === stepId.value))
+const currentStep = computed(() => {
+  const step = wizardStore.steps.find(s => s.id === stepId.value)
+  if (!step) return null
+  
+  return {
+    ...step,
+    component: componentMap[step.component]
+  }
+})
 
 // Initialize store step on mount or param change
 watch(stepId, (newId) => {
@@ -47,13 +79,13 @@ watch(stepId, (newId) => {
 
 const handleNext = () => {
     wizardStore.nextStep()
-    router.push(`/form/step-${wizardStore.currentStep}`)
+    router.push(localePath(`/form/step-${wizardStore.currentStep}`))
     wizardStore.autoSave()
 }
 
 const handlePrev = () => {
     wizardStore.prevStep()
-    router.push(`/form/step-${wizardStore.currentStep}`)
+    router.push(localePath(`/form/step-${wizardStore.currentStep}`))
 }
 
 // SEO

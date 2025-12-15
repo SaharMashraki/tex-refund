@@ -165,17 +165,19 @@ onMounted(async () => {
   stats.value.formsCompleted = wizardStore.status === 'submitted' ? 1 : 0
 })
 
+const localePath = useLocalePath()
+
 const startNewForm = () => {
   wizardStore.resetForm()
-  router.push('/form/step-1')
+  router.push(localePath('/form/step-1'))
 }
 
 const resumeForm = () => {
-  router.push(`/form/step-${wizardStore.currentStep}`)
+  router.push(localePath(`/form/step-${wizardStore.currentStep}`))
 }
 
 const viewDocument = (id: number) => {
-  router.push(`/documents/${id}`)
+  router.push(localePath(`/documents/${id}`))
 }
 
 const formatDate = (date: string) => {

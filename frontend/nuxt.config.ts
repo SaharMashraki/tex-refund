@@ -4,6 +4,7 @@ console.log('i18nConfig:', i18nConfig)
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  // Trigger rebuild
 
   // TypeScript configuration
   typescript: {

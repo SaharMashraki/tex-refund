@@ -16,7 +16,7 @@ export const authService = {
    */
   async register(userData: RegisterData) {
     const response = await api.post<{ user: User; token: string }>('/auth/register', userData)
-    return response.data.data
+    return response.data
   },
 
   /**
@@ -24,7 +24,7 @@ export const authService = {
    */
   async refreshToken() {
     const response = await api.post<{ token: string }>('/auth/refresh')
-    return response.data.data
+    return response.data
   },
 
   /**
@@ -32,7 +32,7 @@ export const authService = {
    */
   async getProfile() {
     const response = await api.get<User>('/auth/profile')
-    return response.data.data
+    return response.data
   },
 
   /**
